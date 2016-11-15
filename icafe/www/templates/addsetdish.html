@@ -1,0 +1,58 @@
+<ion-modal-view>
+<ion-content padding="true">
+    <h3 class="title" style="text-align: center">Create SetMeal</h3>
+    <div class="list list-inset">
+
+    	<label class="item item-input">
+ 			<input ng-model="setmeal_name" type="text" placeholder="SetMeal Name">
+		</label>
+
+		<label class="item item-input">
+ 			<input ng-model="setmeal_price" type="text" placeholder="SetMeal Price">
+		</label>
+
+		<label class="item item-input">
+ 			<input ng-model="setmeal_description" type="text" placeholder="SetMeal Description">
+		</label>
+  		
+	  <label class="item item-input item-select">
+		<div class="input-label">
+				Select A Staple...
+		</div>
+		<select ng-model="staple_choice" ng-options="staple for staple in staples">
+	    <option value="">...Choose from menu...</option>
+		</select>
+	  </label>
+
+	  <label class="item item-input item-select">
+		<div class="input-label">
+				Select A Drink...
+		</div>
+		<select ng-model="drink_choice" ng-options="drink for drink in drinks">
+	    <option value="">...Choose from menu...</option>
+		</select>
+	  </label>
+
+	  <label class="item item-input item-select">
+		<div class="input-label">
+				Select A Dessert...
+		</div>
+		<select ng-model="dessert_choice" ng-options="dessert for dessert in desserts">
+	    <option value="">...Choose from menu...</option>
+		</select>
+	  </label>
+
+	  <label class="item item-input item-select">
+        <div class="input-label">
+            Dish Serving Period
+        </div>
+      <select ng-model="dish_period" ng-options="period for period in periods">
+        <option value="">...Choose Time Period...</option>
+      </select>
+      </label>
+
+  		<button class="button button-block button-assertive" ng-click="addsetmeal(setmeal_name,setmeal_price,setmeal_description,dish_period,staple_choice,drink_choice,dessert_choice)">
+  			Set
+		  </button>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,25 @@
+<ion-view view-title="SetMeal">
+  	<ion-content padding="true">
+  	<ion-toggle ng-model="fontchange"
+                ng-change="triggerfontchange()">
+     Open Big Font Mode
+    </ion-toggle>
+		<div class="list">
+		    <a class="item item-thumbnail-left item-button-right" ng-repeat="setmeal in setmeals" style="click: false">
+		      <img src="img/bento.jpg">
+		      <h2 ng-show="fontdontchange">{{setmeal.name}}</h2>
+		      <p ng-show="fontdontchange">HK$: {{setmeal.price}}</p>
+		      <p ng-show="fontdontchange">Description: {{setmeal.description}}</p>
+		      <p ng-show="fontdontchange">Set Include: {{setmeal.dishcontent}}</p>
+		      <h1 ng-show="fontchange">{{setmeal.name}}</h1>
+		      <h2 ng-show="fontchange">HK$: {{setmeal.price}}</h2>
+		      <h2 ng-show="fontchange">Description: {{setmeal.description}}</h2>
+		      <h2 ng-show="fontchange">Set Include: {{setmeal.dishcontent}}</h2>
+		      <button class="button  button-balanced button-clear   icon ion-android-cart" style="margin-top: 30px"
+	          ng-click="addToCart(setmeal)">
+        	</button>
+		    </a>	    
+		</div>
+
+  </ion-content>
+</ion-view>
