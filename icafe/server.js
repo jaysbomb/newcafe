@@ -8,7 +8,7 @@ var koa = require('koa'),
     bodyParser = require('koa-bodyparser'),
     session = require('koa-session'),
     passport = require('koa-passport'),
-    cors = require('kcors');
+    cors = require('kcors'),
     serve = require('koa-static');
 
 var config = require('./config/config')[process.env.NODE_ENV || 'development'];
@@ -43,6 +43,7 @@ require('./config/routes')(router, passport);
 
 require('./config/koa')(app, router, config);
 
+// var port = process.argv[2] || config.app.port || 1337 || process.env.PORT;
 var port = process.env.PORT || 1337;
 app.listen(port, function() {
     console.log('Server started on port ' + port);

@@ -11,7 +11,7 @@ module.exports = {
         app: {
             name: 'wom | Development',
             host: 'http://localhost',
-            port: 1337
+            port: 5432
         }
     },
     // production configuration
@@ -21,7 +21,7 @@ module.exports = {
         app: {
             name: 'wom',
             host: 'http://localhost',
-            port: 80
+            port: 5432
         }
     }
 };

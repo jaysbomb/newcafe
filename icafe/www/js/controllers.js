@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
   localStorageService, ngProgressLite, $state, $cordovaBarcodeScanner) {
   $scope.$on('$ionicView.beforeEnter', function() {
     $scope.user = localStorageService.get('user');
-    $http.get("http://https://icafe-a.herokuapp.com/getAdmin/admin@admin.com")
+    $http.get("https://icafe-a.herokuapp.com/getAdmin/admin@admin.com")
         .then(function(response){
           // console.log(response.data.table);
           $scope.tableNumber = response.data.table;
